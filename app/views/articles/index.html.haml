@@ -1,14 +1,11 @@
-/ Compiled and minified CSS
-%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css", :rel => "stylesheet"}/
-/ Compiled and minified JavaScript
-%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
-%nav.red.darken-4
-  .nav-wrapper
-    %a.brand-logo{:href => "#"} MiniBlog
-    %ul#nav-mobile.right.hide-on-med-and-down
-      %li
-        %a{:href => "sass.html"} Sass
-      %li
-        %a{:href => "badges.html"} Components
-      %li
-        %a{:href => "collapsible.html"} JavaScript
+.main
+  .row
+    .col.s12.m6.offset-m3
+      .card.z-depth-3.hoverable
+        .card-content.black-text
+          %span.card-title.red-text Blog Title
+          %p
+          
+        .card-action
+          %a.red-text{:href => "#" } This is a link
+          %a{:href => "#"} This is a link
