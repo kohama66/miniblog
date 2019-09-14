@@ -1,0 +1,16 @@
+.new-main
+  New 
+  .main-post
+    =form_for @article, url: articles_path do |f|
+      =f.text_area :content, class: "textarea"
+      =f.submit "送信"
+    
+    
+    
+    
+    -# -form_for [@article, url: articles_new_path] do |f|
+    -#   =f.text_field :content, placeholder: "type a message", class: "input"
+      -# -# %label(for="upload" class="image-icon")
+      -# -#   = fa_icon "image"
+      -# =form.file_field :image, id: "upload" 
+      -# =form.submit "Send", class: "submit-btn"
