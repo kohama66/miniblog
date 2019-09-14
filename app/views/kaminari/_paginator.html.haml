@@ -7,7 +7,7 @@
 -#    paginator:     the paginator that renders the pagination tags inside
 .paginate
   = paginator.render do
-    %nav.pagination.red.accent-4
+    %nav.pagination.brown.darken-4
       = first_page_tag unless current_page.first?
       = prev_page_tag unless current_page.first?
       - each_page do |page|

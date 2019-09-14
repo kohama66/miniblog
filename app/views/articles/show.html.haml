@@ -1,5 +1,7 @@
-.main
-  .main-post
-    .show-content
-      =simple_format(@article.content)
+.back
+  .new-main
+    =@article.user.name + "さんの記事"
+    .main-post
+      .show-content
+        =simple_format(@article.content)
     

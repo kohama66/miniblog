@@ -1,6 +1,7 @@
-.new-main
-  New 
-  .main-post
-    =form_for @article, url: articles_path do |f|
-      =f.text_area :content, class: "textarea"
-      =f.submit "送信"
+.back
+  .new-main
+    新記事投稿 
+    .main-post
+      =form_for @article, url: articles_path do |f|
+        =f.text_area :content, class: "textarea"
+        =f.submit "送信"
