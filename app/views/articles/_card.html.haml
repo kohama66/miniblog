@@ -1,0 +1,12 @@
+.row
+  .col.s12.m6.offset-m3
+    .card.z-depth-3.hoverable
+      .card-content.black-text
+        %span.card-title.red-text 
+          =card.user.name
+        %p
+          =card.content
+      .card-action
+        =link_to "記事を読む", "articles/show"
+        -if user_signed_in? && card.user_id == current_user.id
+          =link_to "記事を編集する", "#"
