@@ -16,11 +16,13 @@
         %a.brand-logo{:href => "/"} MiniBlog
         %ul#nav-mobile.right.hide-on-med-and-down
           %li
-            =link_to "新規登録", new_user_registration_path
+            - if user_signed_in?
+              =link_to "記事投稿"
+            - else  
+              =link_to "新規登録", new_user_registration_path
           %li
-            %a{:href => "badges.html"} Components
-          %li
-            %a{:href => "collapsible.html"} JavaScript
+            - if user_signed_in?
+              =link_to "ログアウト", destroy_user_session_path, method: :delete
+            - else  
+              =link_to "ログイン", new_user_session_path, class: 'post'
     = yield
-
-  -# <%= link_to "新規登録", new_user_registration_path, class: "post" %> 
