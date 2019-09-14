@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @article = Article.order("created_at DESC").page(params[:page]).per(5)
+    @article = Article.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -14,6 +14,17 @@ class ArticlesController < ApplicationController
   end  
 
   def show
+    @article = Article.find(params[:id])
+  end  
+
+  def edit
+    @article = Article.find(params[:id])
+  end  
+
+  def update
+    article = Article.find(params[:id])
+    article.update(article_params)
+    redirect_to action: 'index'
   end  
 
   private

@@ -13,10 +13,11 @@
   height: 600px;
   font-size: 20px;
   color: black;
-  border: 2px solid darkgrey
+  border: 2px solid darkgrey;
 }
 .textarea{
   background-color: white;
   height: 500px;
+  width: calc(100% - 40px);
 
 }
