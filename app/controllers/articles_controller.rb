@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
 
   def update
     article = Article.find(params[:id])
-    article.update(article_params)
+    article.update(article_params) if current_user.id == article.user_id
     redirect_to action: 'index'
   end  
 
