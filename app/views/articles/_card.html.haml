@@ -1,0 +1,12 @@
+.row
+  .col.s12.m6.offset-m3
+    .card.z-depth-5.hoverable.transparent
+      .card-content.yellow-text.text-lighten-5
+        %span.card-title.yellow-text.text-lighten-5
+          ="#{card.user.name}さんの記事"
+        %p
+          =card.content
+      .card-action
+        =link_to "記事を読む", "articles/#{card.id}"
+        -if user_signed_in? && card.user_id == current_user.id
+          =link_to "記事を編集する", "/articles/#{card.id}/edit"
