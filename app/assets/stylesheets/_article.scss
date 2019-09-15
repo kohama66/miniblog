@@ -22,3 +22,6 @@
   background-image: url(ki3.jpg);
   background-size: 100%;
 }
+.read{
+  @extend .yellow-text, .text-lighten-5;
+}

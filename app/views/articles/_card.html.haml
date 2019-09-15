@@ -7,6 +7,6 @@
         %p
           =card.content
       .card-action
-        =link_to "記事を読む", "articles/#{card.id}"
+        =link_to "記事を読む", "articles/#{card.id}", class: "read"
         -if user_signed_in? && card.user_id == current_user.id
-          =link_to "記事を編集する", "/articles/#{card.id}/edit"
+          =link_to "記事を編集する", "/articles/#{card.id}/edit", class: "read"
