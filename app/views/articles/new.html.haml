@@ -4,4 +4,4 @@
     .main-post
       =form_for @article, url: articles_path do |f|
         =f.text_area :content, class: "textarea"
-        =f.submit "送信"
+        =f.submit "送信", class: "put", id: "put2" 

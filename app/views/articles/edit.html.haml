@@ -4,5 +4,5 @@
     .main-post
       =form_for @article do |f|
         =f.text_area :content, class: "textarea"
-        =f.submit "送信"
-      =link_to "削除", " /articles/#{@article.id}", method: :delete
+        =f.submit "送信", class: "put"
+      =link_to "削除", " /articles/#{@article.id}", method: :delete, class: "btn"
