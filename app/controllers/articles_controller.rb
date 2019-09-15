@@ -27,6 +27,12 @@ class ArticlesController < ApplicationController
     redirect_to action: 'index'
   end  
 
+  def destroy
+    article = Article.find(params[:id])
+    article.destroy if current_user.id == article.user_id
+    redirect_to action: 'index'
+  end  
+
   private
   def article_params
     params.require(:article).permit(:content).merge(user_id: current_user.id)
